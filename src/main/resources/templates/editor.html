@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>富文本</title>
+
+</head>
+<body>
+<div id="container"></div>
+
+<button onclick="alertContent()">弹出富文本内容</button>
+
+
+<script src="ueditor/ueditor.config.js"></script>
+<script src="ueditor/ueditor.all.js?v=1"></script>
+<script>
+
+
+    var ue= UE.getEditor('container');
+    ue.ready(function() {
+        ue.setContent('hello world');
+    });
+
+    /**
+     * 获得富文本内容的方法
+     */
+    function geteditorContent(){
+        return UE.getEditor('container').getContent();
+    }
+
+    /**
+     * 弹出框方法
+     */
+    function alertContent() {
+        alert(geteditorContent());
+    }
+
+</script>
+</body>
+</html>
