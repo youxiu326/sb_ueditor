@@ -11,6 +11,8 @@ public class Student implements Serializable {
 
     private Date birthday;
 
+    private String remark;
+
     public String getId() {
         return id;
     }
@@ -33,5 +35,13 @@ public class Student implements Serializable {
 
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
     }
 }
